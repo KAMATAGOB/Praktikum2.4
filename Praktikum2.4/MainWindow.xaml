@@ -1,0 +1,58 @@
+﻿<Window x:Class="Praktikum2._4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktikum2._4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="566">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Beispiel-Zweipole" Width="250" />
+                <ComboBox x:Name="cbPreset" Width="230" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Zweipol- Widerstand (R)" Width="250" />
+                <TextBox x:Name="tbWid" HorizontalContentAlignment="Right" Text="100" Width="230" TextChanged="tbWid_TextChanged"/>
+                <Label Content="Ohm" Width="65" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Zweipol- Kapazität (C)" Width="250" />
+                <TextBox x:Name="tbCap" HorizontalContentAlignment="Right" Text="4,7" Width="230" TextChanged="tbCap_TextChanged"/>
+                <Label Content="µF" Width="65" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Frequenz" Width="115" />
+                        <Label x:Name="lbFreq" Content="Label" Width="100" />
+                        <Label Content="Hz" Width="35" />
+                        <ComboBox x:Name="cbType" Width="230" >
+                            <ComboBoxItem IsSelected="True">RC-Parallel-Zweipol</ComboBoxItem>
+                            <ComboBoxItem>RC-Reihen-Zweipol</ComboBoxItem>
+                        </ComboBox>
+                        
+                    </StackPanel>
+                    <Slider x:Name="slFrequency" Width="550" Maximum="10000" Value="1000" ValueChanged="slFrequency_ValueChanged" SmallChange="1" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Betrag |Z|" Width="250" />
+                <TextBox x:Name="tbBetrag" Width="230" HorizontalContentAlignment="Right" IsReadOnly="True" />
+                <Label Content="Ohm" Width="65" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Z = Re(z) + jIm(z)" Width="250" />
+                <TextBox x:Name="tbKomplex" Width="230" HorizontalContentAlignment="Right" IsReadOnly="True" />
+                <Label Content="Ohm" Width="65" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Speichern" HorizontalContentAlignment="Center" Width="550" Height="50" Click="Button_Click"/>
+            </StackPanel>
+            
+            
+        </StackPanel>
+    </Grid>
+</Window>
