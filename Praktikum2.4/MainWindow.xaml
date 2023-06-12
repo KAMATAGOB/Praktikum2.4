@@ -35,7 +35,7 @@
                         </ComboBox>
                         
                     </StackPanel>
-                    <Slider x:Name="slFrequency" Width="550" Maximum="10000" Value="1000" ValueChanged="slFrequency_ValueChanged" SmallChange="1" />
+                    <Slider x:Name="slFrequency" Width="550" Maximum="10000" Value="1000" ValueChanged="slFrequency_ValueChanged" IsSnapToTickEnabled="True" SmallChange="1" />
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
