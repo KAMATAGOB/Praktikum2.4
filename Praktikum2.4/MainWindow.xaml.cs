@@ -29,7 +29,7 @@ namespace Praktikum2._4
                 read();
             }
             catch(Exeption ex){
-            MessageBox.Show(ex.Message, "Fehler")
+                MessageBox.Show(ex.Message, "Fehler")
             }
             
             //BerechneParallelZweiPol();//dunno
