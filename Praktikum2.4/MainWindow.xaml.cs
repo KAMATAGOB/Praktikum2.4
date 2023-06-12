@@ -25,8 +25,14 @@ namespace Praktikum2._4
         public MainWindow()
         {
             InitializeComponent();
-            read();
-            BerechneParallelZweiPol();
+            try{
+                read();
+            }
+            catch(Exeption ex){
+            MessageBox.Show(ex.Message, "Fehler")
+            }
+            
+            //BerechneParallelZweiPol();//dunno
         }
 
         private void slFrequency_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -37,7 +43,7 @@ namespace Praktikum2._4
         
         private void read()
         {
-            //TODO
+            
 
             string zeile;
             string path = @"..\..\..\txt.txt";
@@ -163,7 +169,7 @@ namespace Praktikum2._4
 
             }
             catch (Exception ex) {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,);
                 return;
             }
 
@@ -279,7 +285,10 @@ namespace Praktikum2._4
 
         private void tbWid_TextChanged(object sender, TextChangedEventArgs e)
         {
+            
             BerechneParallelZweiPol();
+            
+            
         }
 
         private void tbCap_TextChanged(object sender, TextChangedEventArgs e)
